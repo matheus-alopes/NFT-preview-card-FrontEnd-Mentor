@@ -4,7 +4,7 @@ body {
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
     font-weight: 300;
-    color: var(--White);
+    color: #ffff;
 }
 
 main {
@@ -26,48 +26,57 @@ main {
     justify-content: space-between;
 }
 
-.card-img {
+.card a .card-img {
     width: 100%;
     height: 100%;
     border-radius: 3%;
 }
 
-.card-img:hover {
-    content: "";
-    background-color: aqua;
-    cursor: pointer;
+.card a .img-hover-background {
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+    transform: translateY(-101.5%);
+    background-image: "";
+    background-position: center;
 }
 
-.card-infos {
+.card a .img-hover-background:hover {
+    background-color: rgba(0, 255, 255, 0.3);
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out;
+}
+
+.card .card-infos {
     height: 30%;
-    border-bottom: 1px solid var(--footer-line-color);
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.card-description {
-    color: var(--text-color);
-
-}
-
-.base-infos {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card-tittle {
+.card .card-infos .card-tittle {
     font-size: 25px;
+    color: #ffff;
 }
 
-.card-tittle:hover {
-    cursor: pointer;
+.card .card-infos .card-tittle:hover {
     color: var(--cyan);
     transition: 1s;
 }
 
-.nft-value {
+.card .card-infos .card-description {
+    color: var(--text-color);
+
+}
+
+.card .card-infos .base-infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .card-infos .base-infos .nft-value {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -75,45 +84,47 @@ main {
     font-weight: 700;
 }
 
-.expire-date {
+.card .card-infos .base-infos .expire-date {
     color: var(--text-color);
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-footer {
+.card footer {
+    border-top: 1px solid var(--footer-line-color);
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-.avatar-container {
+.card footer .avatar-container {
     display: flex;
     align-items: center;
 }
 
-.creator-img {
+.card footer .avatar-container .creator-img {
     width: 32px;
     height: 32px;
-    border: 1px solid white;
+    border: 1px solid #ffff;
     border-radius: 50%;
 }
 
-.creator {
+.card footer .creator {
     color: var(--text-color);
     align-self: center;
 }
 
-.creator-name {
-    color: white;
+.card footer .creator .creator-name {
+    color: #ffff;
 }
 
-.creator-name:hover {
+.card footer .creator .creator-name:hover {
     color: var(--cyan);
     transition: 1s;
 }
 
-.deadweight {
+.card footer .deadweight {
     width: 32px;
     height: 32px;
 }
@@ -125,15 +136,15 @@ footer {
     
     .card {
         width: 300px;
-        height: 550px;
+        height: 510px;
     }
 
-    .card-tittle {
+    .card .card-infos .card-tittle {
         font-size: 20px;
     }
 
-    .card-infos {
-        padding-bottom: 20px;
+    .card footer {
+        padding-top: 16px;
     }
 }
 
@@ -144,19 +155,19 @@ footer {
     
     .card {
         width: 250px;
-        height: 500px;
+        height: 425px;
     }
 
-    footer {
-        transform: translateY(-1000);
+    .card footer {
+        padding-top: 12px;
     }
 
-    .creator-img {
+    .card footer .avatar-container .creator-img {
         width: 26px;
         height: 26px;
     }
 
-    .deadweight {
+    .card footer .deadweight {
         width: 26px;
         height: 26px;
     }
