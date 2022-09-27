@@ -4,7 +4,7 @@ body {
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
     font-weight: 300;
-    color: #ffff;
+    color: #ffffff;
 }
 
 main {
@@ -37,14 +37,15 @@ main {
     height: 100%;
     border-radius: 3%;
     transform: translateY(-101.5%);
-    background-image: "";
     background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
 }
 
 .card a .img-hover-background:hover {
     background-color: rgba(0, 255, 255, 0.3);
     background-image: url(../images/icon-view.svg);
-    background-repeat: no-repeat;
+    opacity: 1;
     transition: 1s ease-in-out;
 }
 
@@ -58,7 +59,7 @@ main {
 
 .card .card-infos .card-tittle {
     font-size: 25px;
-    color: #ffff;
+    color: #ffffff;
 }
 
 .card .card-infos .card-tittle:hover {
@@ -106,7 +107,7 @@ main {
 .card footer .avatar-container .creator-img {
     width: 32px;
     height: 32px;
-    border: 1px solid #ffff;
+    border: 1px solid #ffffff;
     border-radius: 50%;
 }
 
@@ -116,7 +117,7 @@ main {
 }
 
 .card footer .creator .creator-name {
-    color: #ffff;
+    color: #ffffff;
 }
 
 .card footer .creator .creator-name:hover {
